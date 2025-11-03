@@ -2,21 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/splashScreenVerticalLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/splashScreenTitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0.1"
         android:fontFamily="sans-serif-black"
+        android:padding="5dp"
         android:text="Ahorcado"
         android:textAlignment="center"
-        android:textSize="60sp"
-        android:layout_weight="0.1"
-        android:padding="5dp"/>
+        android:textSize="60sp" />
 
     <ImageView
         android:id="@+id/splashScreenImage"
@@ -26,7 +27,7 @@
         tools:srcCompat="@drawable/img_ahorcado" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tapToContinueText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"

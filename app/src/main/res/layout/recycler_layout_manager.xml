@@ -29,6 +29,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/levelWord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ejemplo"
@@ -52,6 +53,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/levelDifficulty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="tapToContinue">Tap to continue</string>
+    <string name="word">"Word: "</string>
+    <string name="letters">"Letters: "</string>
+    <string name="victory">YOU WIN!</string>
+    <string name="gameOver">YOU LOSE</string>
+    <string name="level1">DOG</string>
+    <string name="level2" translatable="false">ENTI</string>
+    <string name="level3">HANGMAN</string>
+    <string name="level4">APPROVED</string>
+    <string name="level5">EXCELLENT</string>
+    <string name="level6">LEVEL</string>
+    <string name="level7">HOUSE</string>
+    <string name="level8">PROGRAMMER</string>
+    <string name="level9">ARTIST</string>
+    <string name="level10">SOUND</string>
+    <string name="level11">GAME</string>
+    <string name="level12">DIFFICULTY</string>
+    <string name="level13">FROG</string>
+    <string name="level14" translatable="false">PIKACHU</string>
+    <string name="level15" translatable="false">METROID</string>
+    <string name="level16" translatable="false">LUIGI</string>
+    <string name="level17">TEST</string>
+    <string name="level18">DEVELOPER</string>
+    <string name="level19">ANDROID</string>
+    <string name="level20">STUDIO</string>
+</resources>

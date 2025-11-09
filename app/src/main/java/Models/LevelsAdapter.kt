@@ -8,16 +8,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ahorcado.R
 
-class LevelsAdapter(private val levels: List<Levels>) : RecyclerView.Adapter<LevelsAdapter.LevelViewHolder>() {
+class LevelsAdapter(private val levels: List<Levels>,
+    //Chatgpt
+    private val onItemClick: (Levels) -> Unit) : RecyclerView.Adapter<LevelsAdapter.LevelViewHolder>() {
     override  fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelsAdapter.LevelViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_layout_manager, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_layout_manager,
+            parent, false)
 
         return LevelViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LevelsAdapter.LevelViewHolder, position: Int) {
-        val character = levels[position]
-        holder.bind(character)
+        val level = levels[position]
+        holder.bind(level)
+        holder.itemView.setOnClickListener{ onItemClick(level)}
     }
 
     override fun getItemCount(): Int {

@@ -2,22 +2,21 @@ package com.example.ahorcado
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var changeScene : LinearLayout
+class VictoryActivity : AppCompatActivity() {
+    private lateinit var returnToLevelSelectorScreen : LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_victory)
 
-        changeScene = findViewById(R.id.splashScreenVerticalLayout)
-        changeScene.setOnClickListener{onButtonClick()}
+        returnToLevelSelectorScreen = findViewById(R.id.victoryLayout)
+        returnToLevelSelectorScreen.setOnClickListener{onButtonClick()}
     }
 
     private fun onButtonClick(){

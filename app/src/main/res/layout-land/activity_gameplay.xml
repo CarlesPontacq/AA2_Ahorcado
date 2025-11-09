@@ -1,5 +1,5 @@
-<!--Ajustado con chatgpt -->
 <?xml version="1.0" encoding="utf-8"?>
+<!--Ajustado con chatgpt -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,7 +19,6 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/img_hangman_0" />
 
-    <!-- Contenedor de palabra y letras -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="match_parent"

@@ -6,4 +6,20 @@
     <string name="letters">"Letras: "</string>
     <string name="victory">HAS GANADO!</string>
     <string name="gameOver">HAS PERDIDO</string>
+    <string name="level1">PERRO</string>
+    <string name="level3">AHORCADO</string>
+    <string name="level4">APROBADO</string>
+    <string name="level5">EXCELENTE</string>
+    <string name="level6">NIVEL</string>
+    <string name="level7">CASA</string>
+    <string name="level8">PROGRAMADOR</string>
+    <string name="level9">ARTISTA</string>
+    <string name="level10">SONIDO</string>
+    <string name="level11">JUEGO</string>
+    <string name="level12">DIFICULTAD</string>
+    <string name="level13">RANA</string>
+    <string name="level17">PRUEBA</string>
+    <string name="level18">DESARROLLADOR</string>
+    <string name="level19">ANDROIDE</string>
+    <string name="level20">ESTUDIO</string>
 </resources>

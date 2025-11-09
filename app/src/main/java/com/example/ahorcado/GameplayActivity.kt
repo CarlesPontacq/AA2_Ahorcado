@@ -4,6 +4,7 @@ import Models.LetterAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,10 +17,14 @@ class GameplayActivity : AppCompatActivity() {
    private lateinit var wordTextView: TextView
    private lateinit var hiddenWord: String
    private  lateinit var originalWord: String
+   private  lateinit var hangmanImage: ImageView
+   private var imageIndex: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gameplay)
+
+        hangmanImage = findViewById(R.id.hangmanImage)
 
         originalWord = intent.getStringExtra("SELECTED_WORD") ?: "No word"
         hiddenWord = createHiddenWord(originalWord)
@@ -80,7 +85,9 @@ class GameplayActivity : AppCompatActivity() {
             }
         }
         else{
-
+            complete = false
+            imageIndex++
+            changeImage()
         }
 
         hiddenWord = chars.joinToString(" ")
@@ -94,5 +101,28 @@ class GameplayActivity : AppCompatActivity() {
     private fun goToVictoryScreen(){
         val intent = Intent(this, VictoryActivity::class.java);
         startActivity(intent)
+    }
+
+    private fun goToGameOverScreen(){
+        val intent = Intent(this, GameOverActivity::class.java);
+        startActivity(intent)
+    }
+
+    private fun changeImage(){
+        when(imageIndex) {
+            0 -> hangmanImage.setImageResource(R.drawable.img_hangman_0)
+            1 -> hangmanImage.setImageResource(R.drawable.img_hangman_1)
+            2 -> hangmanImage.setImageResource(R.drawable.img_hangman_2)
+            3 -> hangmanImage.setImageResource(R.drawable.img_hangman_3)
+            4 -> hangmanImage.setImageResource(R.drawable.img_hangman_4)
+            5 -> hangmanImage.setImageResource(R.drawable.img_hangman_5)
+            6 -> hangmanImage.setImageResource(R.drawable.img_hangman_6)
+            7 -> hangmanImage.setImageResource(R.drawable.img_hangman_7)
+            8 -> hangmanImage.setImageResource(R.drawable.img_hangman_8)
+            9 -> hangmanImage.setImageResource(R.drawable.img_hangman_9)
+            10 -> hangmanImage.setImageResource(R.drawable.img_hangman_10)
+            11 -> hangmanImage.setImageResource(R.drawable.img_hangman_11)
+            12 -> goToGameOverScreen()
+        }
     }
 }

@@ -32,34 +32,54 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="59dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_row1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A" />
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="59dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="J" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="59dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="S" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_row5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
 

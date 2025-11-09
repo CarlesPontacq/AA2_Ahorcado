@@ -1,11 +1,15 @@
 package com.example.ahorcado
 
+import Models.LetterAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class GameplayActivity : AppCompatActivity() {
    private lateinit var wordTextView: TextView
@@ -22,6 +26,19 @@ class GameplayActivity : AppCompatActivity() {
 
         wordTextView = findViewById(R.id.wordToGuess)
         wordTextView.text = hiddenWord
+
+        val alphabet = ('A'..'Z').toList()
+        val row1 = alphabet.subList(0, 5)
+        val row2 = alphabet.subList(5, 10)
+        val row3 = alphabet.subList(10, 15)
+        val row4 = alphabet.subList(15, 20)
+        val row5 = alphabet.subList(20, 26)
+
+        setupRecyclerView(findViewById(R.id.recycler_row1), row1)
+        setupRecyclerView(findViewById(R.id.recycler_row2), row2)
+        setupRecyclerView(findViewById(R.id.recycler_row3), row3)
+        setupRecyclerView(findViewById(R.id.recycler_row4), row4)
+        setupRecyclerView(findViewById(R.id.recycler_row5), row5)
     }
 
     //Chatgpt
@@ -32,5 +49,15 @@ class GameplayActivity : AppCompatActivity() {
                 if(i != word.lastIndex) append(" ")
             }
         }
+    }
+
+    private fun setupRecyclerView(recyclerView: RecyclerView, letters: List<Char>){
+        recyclerView.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = LetterAdapter(letters) {letter -> checkLetter(letter)}
+    }
+
+    private fun checkLetter(letter: Char){
+        println("Letra presionada: $letter")
     }
 }

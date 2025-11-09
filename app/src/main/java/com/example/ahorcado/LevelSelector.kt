@@ -25,7 +25,7 @@ class LevelSelector : AppCompatActivity() {
             Levels("Artist"),
             Levels("Sound"),
             Levels("Game"),
-            Levels("VideoGame"),
+            Levels("Soundwave"),
             Levels("Frog"),
             Levels("Pikachu"),
             Levels("Metroid"),

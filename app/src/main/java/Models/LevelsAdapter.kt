@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ahorcado.R
 
 class LevelsAdapter(private val levels: List<Levels>,
+    //Chatgpt
     private val onItemClick: (Levels) -> Unit) : RecyclerView.Adapter<LevelsAdapter.LevelViewHolder>() {
     override  fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelsAdapter.LevelViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_layout_manager,

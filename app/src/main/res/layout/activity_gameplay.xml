@@ -8,10 +8,59 @@
     tools:context=".GameplayActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/wordToGuess"
+    <ImageView
+        android:id="@+id/splashScreenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        app:srcCompat="@drawable/img_ahorcado"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WORD"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wordToGuess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:text="WORD"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

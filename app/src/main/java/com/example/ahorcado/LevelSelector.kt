@@ -2,6 +2,7 @@ package com.example.ahorcado
 
 import Models.Levels
 import Models.LevelsAdapter
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,6 +39,16 @@ class LevelSelector : AppCompatActivity() {
 
         val recyclerView: RecyclerView = findViewById(R.id.level_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = LevelsAdapter(levels)
+
+        recyclerView.adapter = LevelsAdapter(levels){selectedLevel ->
+            val intent = Intent(this, GameplayActivity::class.java)
+            intent.putExtra("SELECTED_WORD", selectedLevel.word)
+            startActivity(intent)
+        }
+    }
+
+    private fun onButtonClick(){
+        val intent = Intent(this, GameplayActivity::class.java);
+        startActivity(intent)
     }
 }

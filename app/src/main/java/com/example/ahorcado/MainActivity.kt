@@ -10,14 +10,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var CambioEscena : LinearLayout
+    private lateinit var changeScene : LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        CambioEscena = findViewById(R.id.splashScreenVerticalLayout)
-        CambioEscena.setOnClickListener{onButtonClick()}
+        changeScene = findViewById(R.id.splashScreenVerticalLayout)
+        changeScene.setOnClickListener{onButtonClick()}
     }
 
     private fun onButtonClick(){

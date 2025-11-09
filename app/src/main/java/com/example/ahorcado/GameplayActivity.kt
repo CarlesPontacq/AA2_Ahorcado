@@ -59,7 +59,7 @@ class GameplayActivity : AppCompatActivity() {
 
     private fun checkLetter(letter: Char, button: Button){
         button.isEnabled = false
-        button.alpha = 0.5f
+        button.alpha = 0.75f
 
         val chars = hiddenWord.replace(" ", "").toCharArray()
         var found = false
@@ -71,14 +71,28 @@ class GameplayActivity : AppCompatActivity() {
             }
         }
 
-        hiddenWord = chars.joinToString(" ")
-        wordTextView.text = hiddenWord
-
+        var complete = true
         if(found){
-
+            for(i in originalWord.indices){
+                if(chars[i] == '_'){
+                    complete = false
+                }
+            }
         }
         else{
 
         }
+
+        hiddenWord = chars.joinToString(" ")
+        wordTextView.text = hiddenWord
+
+        if(complete){
+            goToVictoryScreen()
+        }
+    }
+
+    private fun goToVictoryScreen(){
+        val intent = Intent(this, VictoryActivity::class.java);
+        startActivity(intent)
     }
 }

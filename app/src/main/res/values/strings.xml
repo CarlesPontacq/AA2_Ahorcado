@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Ahorcado</string>
+    <string name="app_name">Hangman</string>
+    <string name="tapToContinue">Tap to continue</string>
+    <string name="word">"Word: "</string>
+    <string name="letters">"Letters: "</string>
+    <string name="victory">YOU WIN!</string>
+    <string name="gameOver">YOU LOSE</string>
 </resources>

@@ -5,16 +5,13 @@
     android:id="@+id/victoryLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VictoryActivity"
+    tools:context=".LevelSelector"
     android:orientation="vertical">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/level_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/victory"
-        android:textAlignment="center"
-        android:textSize="80dp"
-        android:layout_marginTop="250dp"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent">
 
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

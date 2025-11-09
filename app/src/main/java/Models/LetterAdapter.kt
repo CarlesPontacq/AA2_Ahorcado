@@ -5,12 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ahorcado.R
 
 class LetterAdapter(
     private val letters: List<Char>,
-    private val onLetterClick: (Char) -> Unit
+    private val onLetterClick: (Char, Button) -> Unit
     ) : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
     override  fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LetterAdapter.LetterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_list_letter,
@@ -29,12 +30,13 @@ class LetterAdapter(
     }
 
     class LetterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        private  val letterButton: TextView = itemView.findViewById(R.id.letterButton);
+        private  val letterButton: Button = itemView.findViewById(R.id.letterButton);
 
-        fun bind(letter: Char, onLetterClick: (Char) -> Unit){
+        fun bind(letter: Char, onLetterClick: (Char, Button) -> Unit){
             letterButton.text = letter.toString()
+            letterButton.isEnabled = true
             letterButton.setOnClickListener{
-                onLetterClick(letter)
+                onLetterClick(letter, letterButton)
             }
         }
     }
